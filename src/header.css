@@ -18,6 +18,9 @@
 .header .left-section {
   width: 208px;
 }
+.orders-link.active .orders-text{
+  text-decoration: underline;
+}
 
 @media (max-width: 800px) {
   .header .left-section {

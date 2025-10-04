@@ -1,10 +1,10 @@
 import './orders.css';
 import Header from './Header.jsx';
 import {Link} from 'react-router';
-function Orders(){
+function Orders({cart}){
   return(
     <>
-    <Header />
+    <Header cart={cart} />
     <link rel="icon" type="image/png" href="images/orders-favicon.png" />
     <div className="orders-page">
       <div className="page-title">Your Orders</div>

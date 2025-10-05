@@ -6,6 +6,8 @@ function Header({cart}){
       productCount += item.quantity
     })
     return(
+      <>
+      <base href="/" />
         <div className="header">
       <div className="left-section">
         <NavLink to="/" className="header-link">
@@ -37,7 +39,7 @@ function Header({cart}){
         </NavLink>
       </div>
     </div>
-
+</>
     )
 }
 export default Header;

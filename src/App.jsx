@@ -5,8 +5,9 @@ import Checkout from './Checkout.jsx';
 import Tracking from './Tracking.jsx';
 import Orders from './Orders.jsx';
 import axios from 'axios';
-import {useEffect} from 'react'
-import {useState} from 'react'
+import {useEffect} from 'react';
+import {useState} from 'react';
+import Header from './Header.jsx'
 function App() {
   const [currCart, setCart] = useState([]);
   useEffect(() => {
@@ -20,8 +21,8 @@ function App() {
       <Route index element={<Home cart={currCart}/>} />
       <Route path="orders" element={<Orders cart={currCart} />} />
       <Route path="checkout" element={<Checkout cart={currCart}/>} />
-      <Route path="*" element={<h1>Page Not Found</h1>} />
-      <Route path="tracking" element={<Tracking cart={currCart} />} />
+      <Route path="*" element={<><Header cart={currCart} /><h1>Page Not Found</h1></>} />
+      <Route path="tracking/:orderId/:productId" element={<Tracking cart={currCart} />} />
     </Routes>
   )
 };
